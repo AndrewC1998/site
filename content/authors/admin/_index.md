@@ -38,7 +38,7 @@ education:
   courses:
   - course: PhD Statistics
     institution: Imperial College London
-    year: Ongoing
+    year: 2025
   - course: MSc Statistics - Theory and Methods (Distinction)
     institution: Imperial College London
     year: 2020
@@ -92,6 +92,6 @@ Graduate Mathematician and Statistician with a specialism in computational stati
 
 After completing an MSc in Statistics (Theory and Methods) at Imperial College London, I am currently undertaking a PhD in Statistics under the supervision of [Professor Emma McCoy](https://www.imperial.ac.uk/people/e.mccoy) and [Dr. Ed Cohen](https://www.imperial.ac.uk/people/e.cohen) researching the application of wavelets to Point Processes.
 
-I completed my Masters thesis on identifiability of self-exciting point processes, and continued to extend this work during my PhD.
+I completed my Masters thesis on identifiability of self-exciting point processes, and continued to extend this work during my PhD. My PhD included work on indentifiability constraints for Hawkes processes, wavelet estimation for locally stationary Hawkes processes, and debiased whittle estimation for binned time-varying Hawkes processes.
 
 Furthermore, I was a Google Summer of Code open source developer working on creating and maintaining a package for R Project for Statistical Computing. This package is called changepoint.online, and alongside developing the package, I also developed new statistical methods. My research involved the creation of new changepoint detection methods which are online versions of the statistical methods PELT and ECP. I have continued to develop changepoint methods and additionally develop wavelet methods. 
