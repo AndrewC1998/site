@@ -18,14 +18,14 @@
  url = "#experience"
  weight = 30
 
+ [[main]]
+   name = "Projects"
+   url = "#publications"
+   weight = 40
+
 [[main]]
   name = "Creative Experience"
   url = "#posts"
-  weight = 40
-
-[[main]]
-  name = "Projects"
-  url = "#publications"
   weight = 50
 
  [[main]]
