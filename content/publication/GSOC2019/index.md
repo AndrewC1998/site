@@ -14,7 +14,7 @@ publication: "R Packages"
 publication_short: "Packages"
 
 summary: >
-  In 2019 I enhanced the R ecosystem (notably `changepoint`) to detect changes in second-order structure—variance and autocovariance—under dependence, using AR(p) models and the Locally Stationary Wavelet (LSW) framework.
+  In 2019 I enhanced the R ecosystem (notably `changepoint`) to detect changes in second-order structure—variance and autocovariance—under dependence, using AR(p) models and the Locally Stationary Wavelet (LSW) framework. 
 
 tags:
 - Mathematics
