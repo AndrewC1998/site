@@ -37,21 +37,27 @@ hasCJKLanguage = false  # Set `true` for Chinese/Japanese/Korean languages.
 defaultContentLanguageInSubdir = false
 removePathAccents = true  # Workaround for https://github.com/gohugoio/hugo/issues/5687
 
-paginate = 10  # Number of items per page in paginated lists.
 enableEmoji = true
 footnotereturnlinkcontents = "<sup>^</sup>"
 ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+
+# Suppress Goldmark raw HTML warnings (e.g. your old posts with inline HTML)
+ignoreLogs = ["warning-goldmark-raw-html"]
+
+# New-style pagination block (replaces deprecated `paginate` key)
+[pagination]
+  pagerSize = 10  # Number of items per page in paginated lists.
 
 [outputs]
   home = [ "HTML", "RSS", "JSON" ]
   section = [ "HTML", "RSS" ]
 
-# Configure BlackFriday Markdown rendering.
+# Configure BlackFriday Markdown rendering (legacy; harmless to keep).
 #   See: https://gohugo.io/getting-started/configuration/#configure-blackfriday
 [blackfriday]
   hrefTargetBlank = true  # `true` opens external links in a new tab. See https://github.com/gohugoio/hugo/issues/2424
-	angledQuotes = false
-	latexDashes = true
+  angledQuotes = false
+  latexDashes = true
   extensions = ["backslashLineBreak"]
 
 [imaging]
@@ -65,3 +71,10 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   category = "categories"
   publication_type = "publication_types"
   author = "authors"
+
+# Goldmark (current Markdown renderer) options.
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      # Allow raw HTML in your Markdown (so old posts render correctly).
+      unsafe = true

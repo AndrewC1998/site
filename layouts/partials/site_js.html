@@ -1,0 +1,45 @@
+{{/* Minimal JS partial: keep theme JS + dark-mode toggle */}}
+<script src="{{ "/js/academic.min.js" | relURL }}"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var toggle = document.querySelector('.js-dark-toggle');
+  if (!toggle) return;
+
+  var root       = document.documentElement;
+  var storageKey = 'wcTheme';
+
+  function applyTheme(theme) {
+    if (theme === 'dark') {
+      root.classList.add('dark');
+      root.dataset.theme = 'dark';
+      if (document.body) document.body.classList.add('dark');
+    } else {
+      root.classList.remove('dark');
+      root.dataset.theme = 'light';
+      if (document.body) document.body.classList.remove('dark');
+    }
+  }
+
+  // initial theme (localStorage or OS preference)
+  var stored = localStorage.getItem(storageKey);
+  if (!stored) {
+    stored = (window.matchMedia &&
+              window.matchMedia('(prefers-color-scheme: dark)').matches)
+             ? 'dark' : 'light';
+  }
+  applyTheme(stored);
+
+  // toggle on click
+  toggle.addEventListener('click', function (e) {
+    e.preventDefault();
+    var isDark = root.classList.contains('dark') ||
+                 (document.body && document.body.classList.contains('dark'));
+    var next = isDark ? 'light' : 'dark';
+    localStorage.setItem(storageKey, next);
+    applyTheme(next);
+  });
+});
+</script>
+
+{{ partial "custom_js" . }}

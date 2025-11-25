@@ -4,6 +4,7 @@
 # Color theme.
 #   Choose from `default`, `ocean`, `forest`, `dark`, `apogee`, `1950s`, `coffee`, `cupcake`, `strawberry`.
 color_theme = "default"
+
 # Enable users to switch between day and night mode?
 day_night = true
 
@@ -14,32 +15,36 @@ font = "default"
 # Description for social sharing and search engines. If undefined, superuser role is used in place.
 description = ""
 
-# Default image for social sharing and search engines. Place image in `static/img/` folder and specify image name here.
+# Default image for social sharing and search engines.
+# Place image in `static/img/` folder and specify image name here.
 sharing_image = ""
 
-# Twitter username (without @). Used when a vistor shares your site on Twitter.
+# Twitter username (without @). Used when a visitor shares your site on Twitter.
 twitter = ""
 
-# Diplay a logo in navigation bar rather than title (optional).
-#   To enable, place an image in `static/img/` and reference its filename below. To disable, set the value to "".
+# Display a logo in navigation bar rather than title (optional).
+#   To enable, place an image in `static/img/` and reference its filename below.
+#   To disable, set the value to "".
 logo = ""
 
 # Enable global source code highlighting? true/false
-# Documentation: https://sourcethemes.com/academic/docs/writing-markdown-latex/#highlighting-options
+# Documentation:
+# https://sourcethemes.com/academic/docs/writing-markdown-latex/#highlighting-options
 highlight = true
 # highlight_languages = ["r"]  # Add support for highlighting additional languages
-# highlight_style = "github"  # For supported styles, see https://cdnjs.com/libraries/highlight.js/
+# highlight_style = "github"   # For supported styles, see https://cdnjs.com/libraries/highlight.js/
 
 # Enable global LaTeX math rendering?
 #   If false, you can enable it locally on a per page basis.
-math = false
+math = true
 
 # Privacy pack
 #   Show a cookie consent message to visitors
 #   Anonymize IP in Google Analytics (if enabled)
 privacy_pack = false
 
-# Date and time format (refer to https://sourcethemes.com/academic/docs/customization/#date-format )
+# Date and time format (refer to
+# https://sourcethemes.com/academic/docs/customization/#date-format )
 #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
 date_format = "Jan 2, 2006"
 #   Examples: "3:04 pm" or "15:04"
@@ -65,14 +70,6 @@ appointment_url = "https://calendly.com/andyconnell1998"
 contact_links = []
 
 # Display a map.
-# To show your address on a map in the contact widget, you need to enter your latitude, longitude and choose
-# a map provider below.
-# To use Google Maps, set `map = 1` and enter your API key that can be obtained here:
-#   https://developers.google.com/maps/documentation/javascript/get-api-key
-# To use OpenStreetMap tiles, set `map = 2`.
-# To use OpenStreetMap on a high traffic site, set `map = 3` and enter your API key that can be obtained here:
-#   https://www.mapbox.com/studio/account/tokens
-# To get your coordinates, right-click on Google Maps and choose "What's here?". The coords will show up at the bottom.
 #
 # Map provider:
 #   0: No map
@@ -92,7 +89,7 @@ zoom = 15
 # Load CSS and JS plugins
 #   E.g. To load `/assets/css/custom.css`, set `plugins_css = ["custom"]`.
 #   E.g. To load `/assets/js/custom.js`, set `plugins_js = ["custom"]`.
-plugins_css = []
+plugins_css = ["custom"]
 plugins_js  = []
 
 ############################
@@ -120,7 +117,8 @@ sharing = true
 
 # Configuration of publication pages.
 [publications]
-  # Date format (refer to https://sourcethemes.com/academic/docs/customization/#date-format )
+  # Date format (refer to
+  # https://sourcethemes.com/academic/docs/customization/#date-format )
   #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
   date_format = "January 2006"
 
@@ -144,7 +142,7 @@ sharing = true
   #   0: No search engine
   #   1: Academic (built-in)
   #   2: Algolia (https://www.algolia.com)
-  engine = 1
+  engine = 0
 
   # Configuration of Algolia search engine.
   # Paste the values from your Algolia dashboard.
@@ -153,3 +151,12 @@ sharing = true
     api_key = ""
     index_name = ""
     show_logo = false
+
+# Comments (new-style, matches updated site_js.html)
+[comments]
+  # 0 = no comments, 1 = Disqus (as wired in the Academic theme)
+  engine = 0
+
+  [comments.disqus]
+    shortname = ""
+    show_count = true

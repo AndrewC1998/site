@@ -1,0 +1,21 @@
+/* Circular project thumbnails, similar to Creative Experience cards */
+
+.project-list .media-left img,
+.project-list .media-left .article-banner,
+.project-list .stream-item img,
+.project-list .stream-item .article-banner {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.project-list .media-left img,
+.project-list .stream-item img {
+  width: 96px;
+  height: 96px;
+}
+
+.project-list .media-left,
+.project-list .mr-3 {
+  display: flex;
+  align-items: center;
+}

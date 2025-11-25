@@ -90,7 +90,7 @@ user_groups:
 
 Graduate Mathematician and Statistician with a specialism in computational statistics, wavelet methods and stochastic processes.
 
-After completing an MSc in Statistics (Theory and Methods) at Imperial College London, I am currently undertaking a PhD in Statistics under the supervision of [Professor Emma McCoy](https://www.imperial.ac.uk/people/e.mccoy) and [Dr. Ed Cohen](https://www.imperial.ac.uk/people/e.cohen) researching the application of wavelets to Hawkes Processes.
+After completing an MSc in Statistics (Theory and Methods) at Imperial College London, I am currently undertaking a PhD in Statistics under the supervision of [Professor Emma McCoy](https://info.lse.ac.uk/staff/divisions/executive-office/people/emma-mccoy/Emma-McCoy) and [Dr. Ed Cohen](https://www.imperial.ac.uk/people/e.cohen) researching the application of wavelets to Hawkes Processes.
 
 I completed my Masters thesis on identifiability of self-exciting point processes, and continued to extend this work during my PhD. My PhD included work on indentifiability constraints for Hawkes processes, wavelet estimation for locally stationary Hawkes processes, and debiased whittle estimation for binned time-varying Hawkes processes.
 

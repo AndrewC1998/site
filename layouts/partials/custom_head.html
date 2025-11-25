@@ -1,0 +1,24 @@
+{{/* Custom head additions – MathJax for LaTeX rendering */}}
+
+<script>
+  window.MathJax = {
+    tex: {
+      // Support both $...$ and \(...\) for inline,
+      // and $$...$$ / \[...\] for display maths
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[','\\]']],
+      processEscapes: true,
+      tags: 'ams'
+    },
+    options: {
+      // Keep things simple, no right-click menu etc.
+      renderActions: {
+        addMenu: []
+      }
+    }
+  };
+</script>
+
+<script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>

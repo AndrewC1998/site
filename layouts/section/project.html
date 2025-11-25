@@ -1,0 +1,43 @@
+{{ define "main" }}
+
+<div class="universal-wrapper pt-3">
+
+  <h1>{{ .Title }}</h1>
+
+  {{ $p := .Paginator }}
+
+  {{ if gt $p.TotalPages 0 }}
+
+    <div class="project-list">
+      {{ range $p.Pages }}
+        {{ partial "li_compact" . }}
+      {{ end }}
+    </div>
+
+    {{ if gt $p.TotalPages 1 }}
+      <nav class="pagination d-flex justify-content-between align-items-center mt-4">
+        <div>
+          {{ if $p.HasPrev }}
+            <a class="btn btn-outline-primary btn-sm" href="{{ $p.Prev.URL }}">« Newer</a>
+          {{ end }}
+        </div>
+        <span class="text-muted small">
+          Page {{ $p.PageNumber }} of {{ $p.TotalPages }}
+        </span>
+        <div>
+          {{ if $p.HasNext }}
+            <a class="btn btn-outline-primary btn-sm" href="{{ $p.Next.URL }}">Older »</a>
+          {{ end }}
+        </div>
+      </nav>
+    {{ end }}
+
+  {{ else }}
+
+    <p>No projects found.</p>
+
+  {{ end }}
+
+</div>
+
+{{ end }}
